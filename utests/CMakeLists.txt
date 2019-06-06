@@ -16,4 +16,7 @@
  add_dependencies(run_utests test_thread_pool)
 
  add_test (NAME test_thread_pool COMMAND test_thread_pool)
+
+ if(BUILD_TESTING)
  enable_testing ()
+ endif()
