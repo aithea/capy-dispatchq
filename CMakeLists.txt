@@ -14,7 +14,7 @@ include_directories(include)
 # Install                                                                   #
 #############################################################################
 install (TARGETS capy_dispatchq DESTINATION lib)
-install (FILES include/capy_dispatchq.hpp DESTINATION include/milecsa/dispatch)
+install (FILES include/capy_dispatchq.hpp DESTINATION include/capy)
 set(CMAKE_CXX_FLAGS -pthread)
 
 add_subdirectory(utests)

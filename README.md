@@ -1,4 +1,4 @@
-# MILE Dispatch Queue is a multithreaded task dispatcher of queues
+# Capy Dispatch Queue is a multithreaded task dispatcher of queues
 
 The lib is developed to optimize application support for systems with multi-core processors and other symmetric multiprocessing systems.
 It is an implementation of task parallelism based on the thread pool pattern. The fundamental idea is to move the management 
@@ -7,8 +7,8 @@ This model improves simplicity, portability and performance.
 
 ## Build 
 
-    $ git clone https://github.com/mile-core/mile-csa-dispatchq
-    $ cd mile-csa-dispatchq; mkdir build; cd build; cmake ..; make -j4
+    $ git clone https://github.com/aithea/capy-dispatchq
+    $ cd capy-dispatchq; mkdir build; cd build; cmake ..; make -j4
 
 ---
 
