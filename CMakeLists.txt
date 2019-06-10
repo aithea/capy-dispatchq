@@ -4,7 +4,7 @@ enable_testing()
 
 set(CMAKE_CXX_STANDARD 17)
 
-option(BUILD_TESTING "Enable creation of Eigen tests." OF)
+option(BUILD_TESTING "Enable creation of Eigen tests." OFF)
 
 add_library(capy_dispatchq
         src/capy_dispatchq.cpp

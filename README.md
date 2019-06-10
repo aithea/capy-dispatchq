@@ -15,44 +15,45 @@ This model improves simplicity, portability and performance.
 ## Code example
 
 ```c++
-      auto q99 = Queue(99);
-  
-      int w = 10;
-      for (int j = 0; j < w ; ++j) {
-          q10.async([=,&q10]{
-               //
-               // handle task
-               //
-              std::this_thread::sleep_for(std::chrono::seconds(1));
-          });
-      }
- 
-  
-      for (int j = 0; j < 100 ; ++j) {
-          Default::async([=]{
-
+    auto q99 = capy::dispatchq::Queue(99);
+    auto q10 = capy::dispatchq::Queue(10);
+    
+    int w = 10;
+    for (int j = 0; j < w ; ++j) {
+      q10.async([=,&q10]{
+           //
+           // handle task
+           //
+          std::this_thread::sleep_for(std::chrono::seconds(1));
+      });
+    }
+    
+    
+    for (int j = 0; j < 100 ; ++j) {
+      capy::dispatchq::main::async([=]{
+    
+        //
+        // handle tasks async in default queue 
+        //           
+          
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    
+        if (j>20) {
             //
-            // handle tasks async in default queue 
-            //           
-              
-            std::this_thread::sleep_for(std::chrono::milliseconds(100));
-  
-            if (j>20) {
-                //
-                // Stop default loop and join to main thread
-                //
-                Default::loop::exit();
-            }  
-          });
-      }
+            // Stop default loop and join to main thread
+            //
+            capy::dispatchq::main::loop::exit();
+        }  
+      });
+    }
     
-      //
-      // Run default loop
-      //      
-      Default::loop::run();
+    //
+    // Run default loop
+    //      
+    capy::dispatchq::main::loop::run();
     
-      //
-      // Wait tasks after default loop exiting
-      //
-      q99.wait(); 
+    //
+    // Wait tasks after default loop exiting
+    //
+    q99.wait(); 
  ```
