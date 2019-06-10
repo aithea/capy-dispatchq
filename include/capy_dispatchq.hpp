@@ -4,8 +4,6 @@
 
 #pragma once
 
-#include <functional>
-#include <memory>
 #include <queue>
 #include <thread>
 #include <algorithm>
@@ -13,7 +11,6 @@
 #include <cstdint>
 #include <functional>
 #include <future>
-#include <memory>
 #include <thread>
 #include <type_traits>
 #include <utility>
