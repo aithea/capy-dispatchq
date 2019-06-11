@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD 17)
 option(BUILD_TESTING "Enable creation of Eigen tests." OFF)
 
 add_library(capy_dispatchq
-        src/capy_dispatchq.cpp
+        src/dispatchq.cc
         )
 
 include_directories(include)
@@ -16,7 +16,7 @@ include_directories(include)
 # Install                                                                   #
 #############################################################################
 install (TARGETS capy_dispatchq DESTINATION lib)
-install (FILES include/capy_dispatchq.hpp DESTINATION include/capy)
+install (FILES include/capy/dispatchq.h DESTINATION include/capy)
 set(CMAKE_CXX_FLAGS -pthread)
 
 if(BUILD_TESTING)

@@ -3,7 +3,7 @@
 //
 
 
-#include "capy_dispatchq.hpp"
+#include "capy/dispatchq.h"
 
 #include <string>
 #include <streambuf>

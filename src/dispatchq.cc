@@ -2,7 +2,7 @@
 // Created by denn nevera on 30/10/2018.
 //
 
-#include "capy_dispatchq.hpp"
+#include "capy/dispatchq.h"
 
 using namespace capy::dispatchq;
 

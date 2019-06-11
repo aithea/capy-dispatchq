@@ -2,7 +2,7 @@
  # unit test executables                                                     #
  #############################################################################
 
- add_executable(test_thread_pool test_queue.cpp)
+ add_executable(test_thread_pool test_queue.cc)
  target_link_libraries(test_thread_pool capy_dispatchq)
 
  #############################################################################
