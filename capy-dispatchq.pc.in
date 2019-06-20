@@ -1,0 +1,13 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: capy-dispatchq
+Description: dispatchq is a multithreaded task dispatcher of queues
+Version: @VERSION@
+URL: https://github.com/aithea/capy-dispatchq
+Requires.private: @requires_private@
+Libs: -L${libdir} -lpthread -lcapy_dispatchq
+Libs.private: @libs_private@
+CFlags: -I${includedir}
