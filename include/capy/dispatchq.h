@@ -382,6 +382,8 @@ namespace capy::dispatchq {
          * */
         Queue(size_t size = 1);
 
+        virtual ~Queue() {};
+
         /**
          * Access to main thread task queue
          * */
