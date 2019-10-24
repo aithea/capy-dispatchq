@@ -1,0 +1,13 @@
+prefix=/usr/local/dehancer
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: capy-dispatchq
+Description: dispatchq is a multithreaded task dispatcher of queues
+Version: 
+URL: https://github.com/aithea/capy-dispatchq
+Requires.private: 
+Libs: -L${libdir} -lpthread -lcapy_dispatchq
+Libs.private: 
+CFlags: -I${includedir}
